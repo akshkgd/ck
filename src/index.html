@@ -1,0 +1,208 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CodeKaro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+</head>
+
+<body class="font-mona  relative overflow-x-hidden">
+    <div class="gradient-circle absolute top-[90vh]"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="bg-[#060617] p-4 shadow-md w-[1100]">
+        <div class="container mx-auto  flex justify-between items-center">
+            <div class="flex gap-4 items-center justify-center">
+                <!-- logo -->
+                <div class="text-white text-xl font-bold">CodeKaro</div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden text-white md:flex gap-4">
+                    <a class="navLinks" href="#" class="relative decoration-none cursor-pointer">Home</a>
+                    <a class="navLinks" href="#" class="relative decoration-none cursor-pointer">About</a>
+                    <a class="navLinks" href="#" class="relative decoration-none cursor-pointer">Contact</a>
+                </div>
+            </div>
+
+
+            <!-- Register/Login Buttons -->
+            <div class="hidden md:flex space-x-4">
+                <button class="text-white   px-3 py-1 rounded">Login</button>
+                <button class="bg-transparent border border-white text-white text-[#0D1117] px-3 py-1 rounded">Register</button>
+            </div>
+
+            <!-- Mobile Navigation Toggle -->
+            <div class="md:hidden">
+                <button id="mobileToggle" class="text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobileMenu" class="md:hidden h-full overflow-hidden absolute top-[61px] flex flex-col w-full bg-white z-20 space-y-4">
+        <div class="mobileNavLinks flex flex-col p-4">
+    
+            <!-- Menu Items -->
+            <div class="menu-item py-3 px-4 hover:bg-[#0d1117] hover:transition-all text-[#0d1117] hover:text-white rounded-sm">
+                <a href="#" class="text-lg font-semibold  hover:text-white hover:transition-all">Courses</a>
+            </div>
+            <div class="menu-item py-3 px-4 hover:bg-[#0d1117] transition-all text-[#0d1117] hover:text-white rounded-sm">
+                <a href="#" class="text-lg font-semibold  hover:text-white hover:transition-all">About</a>
+            </div>
+            <div class="menu-item py-3 px-4 hover:bg-[#0d1117]  transition-all text-[#0d1117] hover:text-white rounded-sm">
+                <a href="#" class="text-lg font-semibold  hover:text-white hover:transition-all">New Launch</a>
+            </div>
+    
+        </div>
+    
+        <!-- Login and Register Buttons -->
+        <div class="flex space-x-4 p-4">
+    
+            <button class="text-white bg-[#0D1117] px-4 py-2 ">Login</button>
+            <button class="bg-white text-[#0D1117] px-4 py-2 rounded-full">Register</button>
+    
+        </div>
+    </div>
+    
+    <!-- Home Section -->
+
+    <div id="HomeSection"
+        class="bg-gradient-to-t relative items-center justify-center text-white flex-col  from-[#000008] to-[#060617] flex w-full h-[calc(fit-61px)]">
+
+        <!-- Home Intro -->
+
+        <div class="h-[calc(100vh-61px)] flex items-center justify-center flex-col">
+            <div class="headin md:w-[60vw] w-[90vw]   z-10">
+                <h1 class="text-7xl md:text-7xl text-center  font-extrabold tracking-tight ">Start coding <span
+                        class=" leading-tight bg-gradient-to-r from-white via-[#9372FF] to-[#4B69FF] text-transparent bg-clip-text">instantly</span>
+                        with Codekaro</h1>
+            </div>
+            <div class="w-[80%]  z-10">
+                <p class="mt-6 mb-0 text-zinc-500 text-center text-xl">
+                    Social Learning and expert-led programs to start, transition or boost your career
+                </p>
+            </div>
+            <div class="flex gap-4">
+                <button class="z-10 w-fit  rounded-md mt-16 h-14 border flex items-center px-8 text-xl bg-white text-zinc-900">
+                    <div class="font-medium">Start Learning for free</div>
+                </button>
+                <button class="z-10 w-fit  rounded-md mt-16 h-14 border flex items-center px-8 text-xl bg-transparent text-white">
+                    <div class="font-medium">Explore Courses</div>
+                </button>
+            </div>
+            
+        </div>
+
+        <!-- Home Courses -->
+
+
+        <div class="courses z-10 w-[100vw]  top-[calc(100vh-61px)]  h-fit">
+
+            <div class="heading w-full text-4xl md:text-5xl py-10  ">
+                <h1 class="px-10 md:pl-20 pr-20 font-bold leading-tight text-center">Industry-relevant programs <br> to
+                    set you apart</h1>
+            </div>
+
+            <!-- Home Courses cards -->
+
+            <div x-data="{ cards: [
+                {
+                    image: 'https://space-mycohort-web.sgp1.cdn.digitaloceanspaces.com/static/courses/pmi-banner.png',
+                    title: 'Noteworthy technology acquisitions 2021',
+                    description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
+                    link: '#',
+                },
+                {
+                    image: 'https://space-mycohort-web.sgp1.cdn.digitaloceanspaces.com/static/courses/pmi-banner.png',
+                    title: 'Noteworthy technology acquisitions 2021',
+                    description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
+                    link: '#',
+                },
+                {
+                    image: 'https://space-mycohort-web.sgp1.cdn.digitaloceanspaces.com/static/courses/pmi-banner.png',
+                    title: 'Noteworthy technology acquisitions 2021',
+                    description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
+                    link: '#',
+                },
+            ] }">
+            <div class="flex flex-wrap my-10 mb-20 items-center justify-center mx-20 gap-10">
+                <template x-for="(card, index) in cards" :key="index">
+                    <div class="max-w-md  border  rounded-lg shadow bg-transparent  border-gray-700">
+                        <a :href="card.link">
+                            <img class="rounded-t-lg" :src="card.image" alt="" />
+                        </a>
+                        <div class="p-6">
+                            <a :href="card.link">
+                                <h5 class="mb-3 text-3xl font-bold tracking-tight text-white" x-text="card.title"></h5>
+                            </a>
+                            <p class="mb-4 font-normal text-lg text-gray-400" x-text="card.description"></p>
+                            <a :href="card.link" class="inline-flex items-center px-4 py-2 text-lg font-medium text-center text-white bg-[#9372FF] rounded-lg   ">
+                                Read more
+                                <svg class="rtl:rotate-180 w-4 h-4 ms-2" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>
